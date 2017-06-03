@@ -93,10 +93,10 @@ func joinSubTrees(h hash.Hash, a, b *subTree) *subTree {
 
 // New creates a new Tree. The provided hash will be used for all hashing
 // operations within the Tree.
-func New(h hash.Hash) *merkletree {
-	return &merkletree{
+func New(h hash.Hash) *Block {
+	return &Block{merkletree{
 		hash: h,
-	}
+	}}
 }
 
 // Prove creates a proof that the leaf at the established index (established by
